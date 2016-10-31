@@ -1,14 +1,20 @@
 
 
 {
-  "user": {
-  	"username": "Jake",
-  	"password": "123",
-  	"task":  [
-      	{"taskname": "Detist appoinment", "duedate": "20:30"},
-      	{"taskname": "Go to gym", "duedate": "09:15"},
-      	{"taskname": "Doing physic homework", "duedate": "11:30"}
-    	]
-  }
+	"user": 
+	[
+		{
+			"username": "Jake","password": "cse170"
+		}
+	],		
 
+	"task":
+	[
+		{
+			"taskname": "Go to Gym","duedate":"08:30" 
+		}
+
+	]
+
+}
 

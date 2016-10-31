@@ -15,12 +15,12 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script src="https://s3.amazonaws.com/codiqa-cdn/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
   <script src="https://s3.amazonaws.com/codiqa-cdn/codiqa.ext.js"></script>
-
-  <script src="script.js"></script>
+  
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 
 </head>
 <body>
-
+<p> Hello</p>
 <div data-role="page" data-control-title="addtask" id="page2">
     <div data-theme="b" data-role="header">
         <h1 class="ui-title">
@@ -80,10 +80,24 @@
             </ul>
         </div>
     </div>
+
+    <div id="demo"> </div>
 </div>
 
 
 
+
+<script>
+
+
+
+$.getJSON("data.json", function(jsd) {
+        $('#demo').html  ('<p> User: '     + jsd.user[0].username     + '</p>');
+        $('#demo').append('<p> Task1: '         + jsd.task[0].taskname + '. Due: ' + jsd.task[0].duedate  + '</p>');
+        //$('#demo').append('<p> Due : '         + jsd.task[0].duedate + '</p>');
+        
+    });
+</script>
 
 
 
