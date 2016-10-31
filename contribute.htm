@@ -45,17 +45,26 @@
         </div>
         <div data-controltype="htmlblock">
             <label>
-                DUE DATE :
+                START TIME :
             </label>
             <input type="time" name="timePicker" id="timePicker1" value="10.00">
             <script>
                 //var currT = date.getTime();
-    var time = $('#timePicker1').val();
-    $('#timePicker1').val("08:00");
+                var time = $('#timePicker1').val();
+                $('#timePicker1').val("08:00");
+            </script>
+            <label>
+                END TIME :
+            </label>
+            <input type="time" name="timePicker" id="timePicker2" value="10.00">
+            <script>
+                //var currT = date.getTime();
+                var time = $('#timePicker2').val();
+                $('#timePicker2').val("12:00");
             </script>
         </div>
         <div id="checkboxes2" class="ui-field-contain" data-controltype="checkboxes">
-            <fieldset data-role="controlgroup" data-type="vertical">
+            <fieldset data-role="controlgroup" data-type="horizontal">
                 <legend>
                     Status:
                 </legend>
