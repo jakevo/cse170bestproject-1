@@ -1,5 +1,14 @@
-{"user":[
-    {"username":"Jake", "password":"123"},
-    {"username":"Jason", "password":"123"},
-    {"username":"Alejandro", "password":"123"}
-]}
+
+
+{
+  "user": {
+  	"username": "Jake",
+  	"password": "123",
+  	"task":  [
+      	{"taskname": "Detist appoinment", "duedate": "20:30"},
+      	{"taskname": "Go to gym", "duedate": "09:15"},
+      	{"taskname": "Doing physic homework", "duedate": "11:30"}
+    	]
+  }
+
+
