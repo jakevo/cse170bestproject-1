@@ -16,7 +16,7 @@
   <script src="https://s3.amazonaws.com/codiqa-cdn/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
   <script src="https://s3.amazonaws.com/codiqa-cdn/codiqa.ext.js"></script>
 
-  <script src="script.js"></script>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 
 </head>
 <body>
@@ -30,23 +30,23 @@
     <form>
     <div role="main" class="ui-content">
         <div class="ui-field-contain" data-controltype="textarea">
-            <label for="textarea4">
+            <label for="email">
                 EMAIL:
             </label>
-            <textarea name="" id="textarea4" placeholder="" required></textarea>
+            <input id="email" placeholder=""></input>
         </div>
         <div class="ui-field-contain" data-controltype="textarea">
-            <label for="textarea5">
+            <label for="password">
                 PASSWORD:
             </label>
-            <textarea name="" id="textarea5" placeholder="" required></textarea>
+            <input type="password" id="pwd" placeholder=""></input>
         </div>
         <div data-role="navbar" data-iconpos="top">
             <ul>
                 <li>
-                    <a onclick="window.location.href='home.htm'" data-transition="fade" data-theme="" data-icon="">
+                    <button  id="login" data-transition="fade" data-theme="" data-icon="">
                         LOG IN
-                    </a>
+                    </button>
                 </li>
             </ul>
         </div>
@@ -71,5 +71,25 @@
       </form>
     </div>
 </div>
+<script>
+
+  $( "#login" ).click(function() {
+
+      if ($("#email").val() == '') {
+        alert("inputs cannot be blank");
+      } else if ($("#pwd").val() == '')
+      {
+        alert("inputs cannot be blank");
+      } else {
+        window.location="home.htm";
+      }
+  });
+
+
+
+</script>
+
+
+
 </body>
 </html>
