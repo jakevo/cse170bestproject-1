@@ -41,7 +41,7 @@
             <label for="textarea1">
                 TASK NAME:
             </label>
-            <textarea name="" id="textarea1" placeholder="" data-mini="true"></textarea>
+            <textarea name="" id="textarea1" placeholder="" data-mini="true"> Go to Gym</textarea>
         </div>
         <div data-controltype="htmlblock">
             <label>
@@ -77,14 +77,14 @@
         <div data-role="navbar" data-iconpos="top">
             <ul>
                 <li>
-                    <a onclick="window.location.href='home.htm'" data-transition="fade" data-theme="" data-icon="">
+                    <button onclick="window.location.href='home.htm'" data-transition="fade" data-theme="" data-icon="">
                         GO BACK
-                    </a>
+                    </button>
                 </li>
                 <li>
-                    <a id="sub" href="javascript:myFunction()" data-transition="fade" data-theme="" data-icon="">
+                    <button id="sub" href="javascript:myFunction()" data-transition="fade" data-theme="" data-icon="">
                         SUBMIT
-                    </a>
+                    </button>
                 </li>
             </ul>
         </div>
@@ -98,10 +98,23 @@
 
 <script>
 
+$(function() {
+    $('#demo').hide();
+    $("#textarea1").val('Go to Gym');
+
+});
+
+$(document).ready(function(){
+    $("#sub").click(function(){
+        $("#demo").show();
+        $("#textarea1").val('');
+    });
+});
+
 
 
 $.getJSON("data.json", function(jsd) {
-        $('#demo').append('<p> Task: '         + jsd.task[0].taskname + '. Due: ' + jsd.task[0].duedate  + '</p>');
+        $('#demo').append('<p> Task: <br>'         +  '1. ' + jsd.task[0].taskname + '. Due: ' + jsd.task[0].duedate  + '</p>');
         //$('#demo').append('<p> Due : '         + jsd.task[0].duedate + '</p>');
         
     });
