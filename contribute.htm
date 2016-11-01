@@ -47,7 +47,7 @@
             <label>
                 START TIME :
             </label>
-            <input type="time" name="timePicker" id="timePicker1" value="10.00">
+            <input type="time" name="timePicker1" id="timePicker1" value="10.00">
             <script>
                 //var currT = date.getTime();
                 var time = $('#timePicker1').val();
@@ -56,7 +56,7 @@
             <label>
                 END TIME :
             </label>
-            <input type="time" name="timePicker" id="timePicker2" value="10.00">
+            <input type="time" name="timePicker2" id="timePicker2" value="10.00">
             <script>
                 //var currT = date.getTime();
                 var time = $('#timePicker2').val();
@@ -82,7 +82,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="javascript:myFunction()" data-transition="fade" data-theme="" data-icon="">
+                    <a id="sub" href="javascript:myFunction()" data-transition="fade" data-theme="" data-icon="">
                         SUBMIT
                     </a>
                 </li>
@@ -101,8 +101,7 @@
 
 
 $.getJSON("data.json", function(jsd) {
-        $('#demo').html  ('<p> User: '     + jsd.user[0].username     + '</p>');
-        $('#demo').append('<p> Task1: '         + jsd.task[0].taskname + '. Due: ' + jsd.task[0].duedate  + '</p>');
+        $('#demo').append('<p> Task: '         + jsd.task[0].taskname + '. Due: ' + jsd.task[0].duedate  + '</p>');
         //$('#demo').append('<p> Due : '         + jsd.task[0].duedate + '</p>');
         
     });
