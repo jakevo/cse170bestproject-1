@@ -42,6 +42,9 @@
                  How do people plan and prioritise their work activities?
             </p>
         </div>
+         <div data-controltype="textblock">
+            <p id="response1" style="text-align: center;"> </p>
+        </div>
         <div class="ui-field-contain" data-controltype="textinput">
             <label for="textinput1">
                 ANSWER:
@@ -55,6 +58,9 @@
                 </b>
                 What are the results from people who plan your actions?
             </p>
+        </div>
+         <div data-controltype="textblock">
+            <p id="response2" style="text-align: center;"> </p>
         </div>
         <div class="ui-field-contain" data-controltype="textinput">
             <label for="textinput1">
@@ -70,6 +76,9 @@
                 </b>
                 What are the results of people who use time management techniques?
             </p>
+        </div>
+        <div data-controltype="textblock">
+            <p id="response3" style="text-align: center;"> </p>
         </div>
         <div class="ui-field-contain" data-controltype="textinput">
             <label for="textinput1">
@@ -94,4 +103,19 @@
     </div>
 </div>
 </body>
+<script>
+$.getJSON("data.json", function(jsd) {
+        $('#response1').append(jsd.Response1[0].answer);
+        $('#response1').append(jsd.Response1[1].answer);
+        $('#response1').append(jsd.Response1[2].answer);
+    });
+$.getJSON("data.json", function(jsd) {
+        $('#response2').append(jsd.Response2[0].answer);
+        $('#response2').append(jsd.Response2[1].answer);
+    });
+$.getJSON("data.json", function(jsd) {
+        $('#response3').append(jsd.Response3[0].answer);
+        $('#response3').append(jsd.Response3[1].answer);
+    });
+</script>
 </html>
