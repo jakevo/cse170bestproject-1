@@ -42,16 +42,42 @@
 		}
 	],
 
-	"Response3":
-	[
-		{
-			"Solution 1: ": "Question Three Response: ", "answer":"People who use checklists tend are more likely to accomplish their tasks on time."
-		},
+  "Response3": [
+    {
+      "Solution 1: ": "Question Three Response: ",
+      "answer": "People who use checklists tend are more likely to accomplish their tasks on time."
+    },
 
-		{
-			"Solution 2: ": "Question Three Response: ", "answer":"Using reminders helps people stay on task and accomplish more in a shorter period of time."
-		}
-	]
-  
+    {
+      "Solution 2: ": "Question Three Response: ",
+      "answer": "Using reminders helps people stay on task and accomplish more in a shorter period of time."
+    }
+  ],
 
+  "tasks": [
+    {
+      "name": "waiting in line",
+      "startTime": "06:00 AM",
+      "endTime": "09:00 AM",
+      "status": "LATE"
+    },
+    {
+      "name": "needfinding",
+      "startTime": "09:15 AM",
+      "endTime": "11:00 AM",
+      "status": "ON TIME"
+    },
+    {
+      "name": "waiting in line",
+      "startTime": "06:00 AM",
+      "endTime": "09:00 AM",
+      "status": "LATE"
+    },
+    {
+      "name": "prototyping",
+      "startTime": "11:15 AM",
+      "endTime": "12:00 PM",
+      "status": "LATE"
+    }
+  ]
 }

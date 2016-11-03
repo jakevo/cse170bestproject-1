@@ -37,12 +37,11 @@
             </h1>
         </div>
         <div data-controltype="textblock">
-            <p>
-                DENTIST APPOINMENT
+            <p id="tasks" style="text-align:left;">
             </p>
-            <p>
+            <!--p>
                 06:00 AM - 09:00AM
-            </p>
+            </p-->
         </div>
         <div data-controltype="textblock">
             <p style="text-align: right;" data-mce-style="text-align: right;">
@@ -198,4 +197,11 @@
     </div>
 </div>
 </body>
+
+<script>
+    $.getJSON("data.json", function (jsd) {
+        $('#tasks').append(jsd.tasks[0].name + '<br>' + jsd.tasks[0].startTime + ' - ' + jsd.tasks[0].endTime);
+    });
+</script>
+
 </html>
