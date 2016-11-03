@@ -122,12 +122,13 @@ $(document).ready(function(){
 });
 
 
-
+//displaying the task
 $.getJSON("data.json", function(jsd) {
-        $('#demo').append('<p> Task: <br>'         +  '1. ' + jsd.task[0].taskname + '. Due: '
-        + jsd.task[0].duedate  + '</p>');
-        //$('#demo').append('<p> Due : '         + jsd.task[0].duedate + '</p>');
-        alert("hello world");
+        $('#demo').append('<p> Task: <br>'            +  '1. ' + jsd.task[0].taskname + '<br>' 
+        + '<ul>' + 
+                   '<li>' + 'Start: '  + jsd.Time[0].Start    + '</li>'   + 
+                   '<li>' + 'End: '    + jsd.Time[0].End      + '</li>'   + 
+                   '<li>' + 'Status: ' + jsd.task[0].Status   + '</li>'   + '</ul>' + '</p>');
     });
 </script>
 

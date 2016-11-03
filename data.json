@@ -11,7 +11,15 @@
 	"task":
 	[
 		{
-			"taskname": "Go to Gym","duedate":"08:30"
+			"taskname": "Go to Gym","Status":"On Time"
+		}
+
+	], 
+
+	"Time":
+	[
+		{
+			"Start": "08:00", "End": "12:00"
 		}
 
 	],
