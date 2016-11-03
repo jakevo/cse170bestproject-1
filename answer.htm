@@ -63,10 +63,10 @@
             <p id="response2" style="text-align: left;"> </p>
         </div>
         <div class="ui-field-contain" data-controltype="textinput">
-            <label for="textinput1">
+            <label for="textinput2">
                 ANSWER:
             </label>
-            <input name="" id="textinput1" placeholder="" value="" type="text">
+            <input name="" id="textinput2" placeholder="" value="" type="text">
         </div>
 
         <div data-controltype="textblock">
@@ -81,10 +81,10 @@
             <p id="response3" style="text-align: left;"> </p>
         </div>
         <div class="ui-field-contain" data-controltype="textinput">
-            <label for="textinput1">
+            <label for="textinput3">
                 ANSWER:
             </label>
-            <input name="" id="textinput1" placeholder="" value="" type="text">
+            <input name="" id="textinput3" placeholder="" value="" type="text">
         </div>
         <div data-role="navbar" data-iconpos="top">
             <ul>
@@ -94,7 +94,7 @@
                     </a>
                 </li>
                 <li>
-                    <a onclick="window.location.href='answer.htm'" data-transition="fade" data-theme="" data-icon="">
+                    <a id="sub" href="javascript:myFunction()"  data-transition="fade" data-theme="" data-icon="">
                         ADD ANSWER
                     </a>
                 </li>
@@ -104,6 +104,26 @@
 </div>
 </body>
 <script>
+
+$(function() {
+    $('#response1').hide();
+    $('#response2').hide();
+    $('#response3').hide();
+    $("#textinput1").val('People who prioritize tasks that are more meaningful are happier.');
+    $("#textinput2").val('People who prioritize tasks that are more meaningful are happier.');
+    $("#textinput2").val('People who prioritize tasks that are more meaningful are happier.');
+});
+
+$(document).ready(function(){
+    $("#sub").click(function(){
+        $("#response1").show();
+        $("#response2").show();
+        $("#response2").show();
+        $("#response1").val('');
+        $("#response2").val('');
+        $("#response3").val('');
+    });
+});
 
 $.getJSON("data.json", function(jsd) {
         $('#response1').append('<ul>' + '<li>' + jsd.Response1[0].answer + '</li>' + 
