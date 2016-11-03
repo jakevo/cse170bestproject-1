@@ -46,6 +46,7 @@
 
         </div>
         <div id="demo"> </div>
+
         <div class="ui-field-contain" data-controltype="textarea">
             <label for="textarea1">
                 TASK NAME:
@@ -98,7 +99,7 @@
             </ul>
         </div>
     </div>
-
+ <div id="demo"> </div>
     
 </div>
 
@@ -126,7 +127,7 @@ $.getJSON("data.json", function(jsd) {
         $('#demo').append('<p> Task: <br>'         +  '1. ' + jsd.task[0].taskname + '. Due: '
         + jsd.task[0].duedate  + '</p>');
         //$('#demo').append('<p> Due : '         + jsd.task[0].duedate + '</p>');
-
+        alert("hello world");
     });
 </script>
 

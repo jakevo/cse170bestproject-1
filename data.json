@@ -15,42 +15,43 @@
 		}
 
 	],
+
 	"Response1":
 	[
 		{
 			"Solution 1: ": "Question One Response: ","answer": "People who prioritize tasks that are more meaningful are happier."
-		}
+		},
 
 		{
 			"Solution 2: ": "Question One Respponse Two: ", "answer": "People who prioritize tasks that take less time appear to feel more accomplished."
-		}
+		},
 
 		{
 	       "Solution 3: ": "Question One Response Three: ", "answer": "People who do things in one sitting feel like they accomplish more."
 		}
 	],
+
 	"Response2":
 	[
 		{
 			"Solution 1: ": "Question Two Response: ", "answer":"People who put subtasks in their calendar seem to be more satisfied than those who cluster one general task to  a specific block of time."
-		}
+		},
 
 		{
 			"Solution 2: ": "Question Two Response: ", "answer":"People who allocate time in their schedule to prepare before they start working seem to accomplish more during their work day."
 		}
 	],
+
 	"Response3":
 	[
 		{
-			"Solution 1: ": "Question Three Response: ", "Answer":"People who use checklists tend are more likely to accomplish their tasks on time."
-		}
+			"Solution 1: ": "Question Three Response: ", "answer":"People who use checklists tend are more likely to accomplish their tasks on time."
+		},
 
 		{
-			"Solution 2: ": "Question Three Response: ", "Answer":"Using reminders helps people stay on task and accomplish more in a shorter period of time."
+			"Solution 2: ": "Question Three Response: ", "answer":"Using reminders helps people stay on task and accomplish more in a shorter period of time."
 		}
 	]
-
-
   
 
 }

@@ -43,7 +43,7 @@
             </p>
         </div>
          <div data-controltype="textblock">
-            <p id="response1" style="text-align: center;"> </p>
+            <p id="response1" style="text-align: left;"> </p>
         </div>
         <div class="ui-field-contain" data-controltype="textinput">
             <label for="textinput1">
@@ -60,7 +60,7 @@
             </p>
         </div>
          <div data-controltype="textblock">
-            <p id="response2" style="text-align: center;"> </p>
+            <p id="response2" style="text-align: left;"> </p>
         </div>
         <div class="ui-field-contain" data-controltype="textinput">
             <label for="textinput1">
@@ -78,7 +78,7 @@
             </p>
         </div>
         <div data-controltype="textblock">
-            <p id="response3" style="text-align: center;"> </p>
+            <p id="response3" style="text-align: left;"> </p>
         </div>
         <div class="ui-field-contain" data-controltype="textinput">
             <label for="textinput1">
@@ -104,18 +104,26 @@
 </div>
 </body>
 <script>
+
 $.getJSON("data.json", function(jsd) {
-        $('#response1').append(jsd.Response1[0].answer);
-        $('#response1').append(jsd.Response1[1].answer);
-        $('#response1').append(jsd.Response1[2].answer);
+        $('#response1').append('<ul>' + '<li>' + jsd.Response1[0].answer + '</li>' + 
+                                        '<li>' + jsd.Response1[1].answer + '</li>' +
+                                        '<li>' + jsd.Response1[2].answer + '</li>' + '</ul');
+        
     });
+
 $.getJSON("data.json", function(jsd) {
-        $('#response2').append(jsd.Response2[0].answer);
-        $('#response2').append(jsd.Response2[1].answer);
+        $('#response2').append('<ul>' + '<li>' + jsd.Response2[0].answer + '</li>' + 
+                                        '<li>' + jsd.Response2[1].answer + '</li>' + '</ul');
+        
     });
+
 $.getJSON("data.json", function(jsd) {
-        $('#response3').append(jsd.Response3[0].answer);
-        $('#response3').append(jsd.Response3[1].answer);
+        $('#response3').append('<ul>' + '<li>' + jsd.Response3[0].answer + '</li>' + 
+                                        '<li>' + jsd.Response3[1].answer + '</li>' +' </ul');
+        
     });
+
+
 </script>
 </html>
