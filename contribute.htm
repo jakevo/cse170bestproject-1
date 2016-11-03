@@ -15,7 +15,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script src="https://s3.amazonaws.com/codiqa-cdn/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
   <script src="https://s3.amazonaws.com/codiqa-cdn/codiqa.ext.js"></script>
-  
+
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 
 </head>
@@ -114,9 +114,10 @@ $(document).ready(function(){
 
 
 $.getJSON("data.json", function(jsd) {
-        $('#demo').append('<p> Task: <br>'         +  '1. ' + jsd.task[0].taskname + '. Due: ' + jsd.task[0].duedate  + '</p>');
+        $('#demo').append('<p> Task: <br>'         +  '1. ' + jsd.task[0].taskname + '. Due: '
+        + jsd.task[0].duedate  + '</p>');
         //$('#demo').append('<p> Due : '         + jsd.task[0].duedate + '</p>');
-        
+
     });
 </script>
 

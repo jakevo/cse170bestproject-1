@@ -1,20 +1,19 @@
 
 
 {
-	"user": 
+	"user":
 	[
 		{
 			"username": "javo@ucsd.edu","password": "cse170"
 		}
-	],		
+	],
 
 	"task":
 	[
 		{
-			"taskname": "Go to Gym","duedate":"08:30" 
+			"taskname": "Go to Gym","duedate":"08:30"
 		}
 
 	]
 
 }
-
