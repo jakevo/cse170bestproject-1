@@ -17,7 +17,7 @@
   <script src="https://s3.amazonaws.com/codiqa-cdn/codiqa.ext.js"></script>
 
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-
+  <script scr="contribute.js"></script>
 </head>
 <body>
 
@@ -71,21 +71,16 @@
       </form>
     </div>
 </div>
+
 <script>
 
   $( "#login" ).click(function() {
-
-      if ($("#email").val() == '') {
-        alert("inputs cannot be blank");
-      } else if ($("#pwd").val() == '')
-      {
+      if (!$("#email").val() || !$("#pwd").val()) {
         alert("inputs cannot be blank");
       } else {
         window.location="home.htm";
       }
   });
-
-
 
 </script>
 
