@@ -64,25 +64,25 @@
 
   "tasks": [
     {
-      "name": "waiting in line",
+      "name": "Waiting in Line",
       "startTime": "06:00 AM",
       "endTime": "09:00 AM",
       "status": "LATE"
     },
     {
-      "name": "needfinding",
+      "name": "Needfinding",
       "startTime": "09:15 AM",
       "endTime": "11:00 AM",
       "status": "ON TIME"
     },
     {
-      "name": "waiting in line",
+      "name": "Biochemistry Lecture",
       "startTime": "06:00 AM",
       "endTime": "09:00 AM",
       "status": "LATE"
     },
     {
-      "name": "prototyping",
+      "name": "COGS 187 Lecture",
       "startTime": "11:15 AM",
       "endTime": "12:00 PM",
       "status": "LATE"

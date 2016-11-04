@@ -35,30 +35,31 @@
                     </b>
                 </span>
             </h1>
+
+            <h4 data-mce-style="text-align: center;" style="text-align: center;">
+                <span style="font-family: 'comic sans ms', sans-serif; color: rgb(136, 136, 136); background-color: rgb(252, 255, 252);">
+                    <b>
+                        ANALYZE DATA FROM OTHERS
+                    </b>
+                </span>
+            </h4>
         </div>
         <div data-controltype="textblock">
-            <p id="tasks" style="text-align:left;">
+            <p id="task1" style="text-align:left;">
             </p>
-            <!--p>
-                06:00 AM - 09:00AM
-            </p-->
         </div>
         <div data-controltype="textblock">
-            <p style="text-align: right;" data-mce-style="text-align: right;">
-                &nbsp; &nbsp;LATE &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
+            <p id="task1status"style="text-align: right;" data-mce-style="text-align: right;">
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
             </p>
         </div>
-        <div data-controltype="textblock">
+        <div id="task2" data-controltype="textblock">
             <p>
-                LECTURE BIOGEOGRAPHY
-            </p>
-            <p>
-                09:15 AM - 11:00 AM
             </p>
         </div>
-        <div data-controltype="textblock">
+        <div id="task2status" data-controltype="textblock">
             <p style="text-align: right;">
-                ON TIME &nbsp; &nbsp; &nbsp;
+                &nbsp; &nbsp; &nbsp;
             </p>
         </div>
 
@@ -188,7 +189,7 @@
                     </a>
                 </li>
                 <li>
-                    <a onclick="window.location.href='analyze.htm'" data-transition="fade" data-theme="" data-icon="">
+                    <a id ="nextSet" href="javascript:myFunction()" data-transition="fade" data-theme="" data-icon="">
                         NEXT DATA SET
                     </a>
                 </li>
@@ -199,9 +200,56 @@
 </body>
 
 <script>
-    $.getJSON("data.json", function (jsd) {
-        $('#tasks').append(jsd.tasks[0].name + '<br>' + jsd.tasks[0].startTime + ' - ' + jsd.tasks[0].endTime);
+
+    $(function () {
+        $("#task1").hide();
+        $("#task1status").hide();
+        $("#task2").hide();
+        $("#task2status").hide();
+        $("#task3").show();
+        $("#task3status").show();
+        $("#task4").show();
+        $("#task4status").show();
     });
+
+    $(document).ready(function () {
+        $("#nextSet").click(function () {
+            $("#task1").show();
+            $("#task1status").show();
+            $("#task2").show();
+            $("#task2status").show();
+            $("#task3").hide();
+            $("#task3status").hide();
+            $("#task4").hide();
+            $("#task4status").hide();
+        });
+    });
+
+    $.getJSON("data.json", function (jsd) {
+        $('#task1').append(jsd.tasks[0].name + '<br>' + jsd.tasks[0].startTime + ' - ' + jsd.tasks[0].endTime);
+    });
+    $.getJSON("data.json", function (jsd) {
+        $('#task1status').append(jsd.tasks[0].status);
+    });
+    $.getJSON("data.json", function (jsd) {
+        $('#task2').append(jsd.tasks[1].name + '<br>' + jsd.tasks[1].startTime + ' - ' + jsd.tasks[1].endTime);
+    });
+    $.getJSON("data.json", function (jsd) {
+        $('#task2status').append(jsd.tasks[1].status);
+    });
+    $.getJSON("data.json", function (jsd) {
+        $('#task3').append(jsd.tasks[2].name + '<br>' + jsd.tasks[2].startTime + ' - ' + jsd.tasks[2].endTime);
+    });
+    $.getJSON("data.json", function (jsd) {
+        $('#task3status').append(jsd.tasks[2].status);
+    });
+    $.getJSON("data.json", function (jsd) {
+        $('#task4').append(jsd.tasks[3].name + '<br>' + jsd.tasks[3].startTime + ' - ' + jsd.tasks[3].endTime);
+    });
+    $.getJSON("data.json", function (jsd) {
+        $('#task4status').append(jsd.tasks[3].status);
+    });
+
 </script>
 
 </html>
